@@ -2,13 +2,40 @@
               ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
               ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
               ~"only screen and (min-device-pixel-ratio: 1.5)";
-@mobile:      ~"only screen and (max-width: 529px)";
-@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@mobile:      ~"only screen and (min-device-width : 320px) and (max-width: 568px)";
+@tablet:      ~"only screen and (min-device-width : 768px) and (max-width: 1024px)";
 @desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
 @desktop-xl:  ~"only screen and (min-width: 1129px)";
 
+@font-face{ 
+	font-family: 'Aleo Bold';
+	src: url('Aleo-Bold-webfont.eot');
+	src: url('Aleo-Bold-webfont.eot?iefix') format('eot'),
+	     url('Aleo-Bold-webfont.woff') format('woff'),
+	     url('Aleo-Bold-webfont.ttf') format('truetype'),
+	     url('Aleo-Bold-webfont.svg#webfont') format('svg');
+}
+
+@font-face {
+	font-family: 'Aleo Italic';
+	src: url('Aleo-Italic-webfont.eot');
+	src: url('Aleo-Italic-webfont.eot?iefix') format('eot'),
+	     url('Aleo-Italic-webfont.woff') format('woff'),
+	     url('Aleo-Italic-webfont.ttf') format('truetype'),
+	     url('Aleo-Italic-webfont.svg#webfont') format('svg');}
+
+@font-face {
+	font-family: 'Aleo Regular';
+	src: url('Aleo-Regular-webfont.eot');
+	src: url('Aleo-Regular-webfont.eot?iefix') format('eot'),
+	     url('Aleo-Regular-webfont.woff') format('woff'),
+	     url('Aleo-Regular-webfont.ttf') format('truetype'),
+	     url('Aleo-Regular-webfont.svg#webfont') format('svg');
+}
+
 
 body {
+
 	display:block;
 	width: 100%;
 	height: 100%;
@@ -23,12 +50,13 @@ body {
 
 
 	    @media @mobile {
-		   width:525px; 
-		   height:394px; 
+		   width:320px;
+		   height:240px; 
 	    }
+
 	    @media @tablet {
-		   width:945px; 
-		   height:709px; 
+		   width:768px; 
+		   height:576px; 
 	    }
 	    @media @desktop {
 		   width:1024px; 
@@ -42,7 +70,8 @@ body {
 	}
 
 	.bottom-text {
-		font-family: "Open Sans", sans-serif;
+
+		font-family: "Aleo Regular";
 		font-weight: 600;
 		text-align: right;
 
@@ -51,13 +80,13 @@ body {
 	    }
 
 	    @media @tablet {
-			font-size: 15px;
+			font-size: 18px;
 	    }
 	    @media @desktop {
-			font-size: 15px;
+			font-size: 18px;
 	    }
 	    @media @desktop-xl {
-			font-size: 15px;
+			font-size: 18px;
 	    }
 
 	}
@@ -69,20 +98,20 @@ body {
 
 
 	    @media @mobile {
-		   margin-left: -262px; 
-		   margin-top: -192px; 
+		   margin-left: -160px; 
+		   margin-top: -120px; 
 	    }
 	    @media @tablet {
-		   margin-left: -472px; 
-		   margin-top: -354px; 
+		   margin-left: -374px; 
+		   margin-top: -263px; 
 	    }
 	    @media @desktop {
-		   margin-left: -512px; /* Half the height */
-		   margin-top: -394px; /* Half the width */			
+		   margin-left: -512px; 
+		   margin-top: -394px; 
 	    }
 	    @media @desktop-xl {
-		   margin-left: -512px; /* Half the height */
-		   margin-top: -394px; /* Half the width */			
+		   margin-left: -512px; 
+		   margin-top: -394px; 
 	    }
 
 
